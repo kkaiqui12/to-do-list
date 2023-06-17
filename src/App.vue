@@ -14,7 +14,7 @@
             :key="i"
             :to="item.to"
             :value="item"
-            color="info"
+            color="green-lighten-1"
           >
             <template v-slot:prepend>
               <v-icon :icon="item.icon"></v-icon>
@@ -24,7 +24,7 @@
         </v-list>
     </v-navigation-drawer>
     <v-app-bar
-        color="teal-darken-4"
+        color="green-lighten-1"
         density="prominent"  
       >
         <template v-slot:image>

@@ -19,6 +19,9 @@ export default createStore({
         })
        
       }
+    },
+    removeTarefa(state, id) {
+      state.tarefas = state.tarefas.filter(tarefa => tarefa.id !== id)
     }
   },
   actions: {
