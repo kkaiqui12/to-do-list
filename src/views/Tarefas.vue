@@ -31,6 +31,7 @@
 <script>
 import Tarefa from '@/components/tarefas/Tarefa.vue'
 export default {
+  props: ['tarefa'],
   name: 'Tarefas',
   components: {
     Tarefa

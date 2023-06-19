@@ -22,6 +22,10 @@ export default createStore({
     },
     removeTarefa(state, id) {
       state.tarefas = state.tarefas.filter(tarefa => tarefa.id !== id)
+    },
+    editaTarefa(state, novaTarefa){
+      console.log(novaTarefa)
+      console.log(state)
     }
   },
   actions: {
