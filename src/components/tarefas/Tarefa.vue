@@ -12,7 +12,7 @@
                 <v-list-item-title :class="{'text-decoration-line-through':tarefa.concluido}">{{ tarefa.titulo }}</v-list-item-title>
             </template>
             <template v-slot:append>
-                <TarefaMenu />
+                <TarefaMenu :tarefa="tarefa" />
                <!-- <v-btn
                     icon="mdi-delete"
                     color="red"
@@ -29,8 +29,11 @@
 import TarefaMenu from './TarefaMenu.vue'
 
 export default {
-    props: ["tarefa"],
+    props: ['tarefa'],
     components: {TarefaMenu},
+    created() {
+        console.log(this.tarefa)
+    },
     methods: {
         trocaCor() {
             // eslint-disable-next-line vue/no-mutating-props

@@ -52,7 +52,6 @@
 
 <script>
   export default {
-    props: ['tarefa'],
     data: () => ({ 
       drawer: null,
       items: [

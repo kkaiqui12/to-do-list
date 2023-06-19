@@ -16,11 +16,11 @@
         active-class=""
       >
         <div 
-          v-for="tarefa, index in $store.state.tarefas" 
+          v-for="(tarefa, index) in $store.state.tarefas" 
           :key="index"
         >
           <Tarefa
-          :tarefa="tarefa"
+          :tarefa = "tarefa"
           />
         </div>
       </v-list-item>
@@ -31,7 +31,6 @@
 <script>
 import Tarefa from '@/components/tarefas/Tarefa.vue'
 export default {
-  props: ['tarefa'],
   name: 'Tarefas',
   components: {
     Tarefa
