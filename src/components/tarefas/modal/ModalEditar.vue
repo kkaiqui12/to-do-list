@@ -1,13 +1,6 @@
 <template>
     <div>
         <v-dialog v-model="dialog" class="mx-auto" max-width="500">
-            <!-- <template v-slot:activator="{ props }">
-                <v-btn
-                color="primary"
-                v-bind="props"
-                >
-                </v-btn>
-            </template> -->
             <v-card>
                 <v-card-title align="center">
                     <span>Editar</span>

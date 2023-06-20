@@ -6,8 +6,6 @@ let db = new Localbase('db')
 export default createStore({
   state: {
     tarefas: [
-      // { id: 1, titulo: "Ir ao mercados", concluido: false },
-      // { id: 2, titulo: "Comprar Ração", concluido: false },
     ]
   },
   getters: {
@@ -33,7 +31,6 @@ export default createStore({
       db.collection('tarefas').doc({ id: novaTarefa.id }).update({
         titulo: novaTarefa.titulo
       })
-
     }
   },
   actions: {
@@ -44,6 +41,13 @@ export default createStore({
     editaTarefa({ commit }, novaTarefa) {
       db.collection('tarefas').doc({ id: novaTarefa.id }).update({
         titulo: novaTarefa.titulo
+      }).then(() => {
+        commit('buscaTarefas')
+      })
+    },
+    concluiTarefa({ commit }, novaTarefa) {
+      db.collection('tarefas').doc({ id: novaTarefa.id }).update({
+        concluido: !novaTarefa.concluido
       }).then(() => {
         commit('buscaTarefas')
       })
